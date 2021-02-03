@@ -9,8 +9,7 @@ type Props = {
   onSelectProduct: (product: Product) => void;
 }
 
-function ProductsList({ products, onSelectProduct, selectedProducts }: Props) {
-  return (
+const ProductsList = ({ products, onSelectProduct, selectedProducts }: Props) => (
     <div className="orders-list-container">
       <div className="orders-list-items">
         {products.map(product => (
@@ -21,7 +20,6 @@ function ProductsList({ products, onSelectProduct, selectedProducts }: Props) {
         ))}
       </div>
     </div>
-  )
-}
+)
 
 export default ProductsList;

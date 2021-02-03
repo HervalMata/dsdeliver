@@ -11,15 +11,17 @@ type Props = {
 
 const ProductsList = ({ products, onSelectProduct, selectedProducts }: Props) => (
     <div className="orders-list-container">
-      <div className="orders-list-items">
-        {products.map(product => (
-          <ProductCard
-              isSelected={checkIsSelected(selectedProducts, product)}
-              onSelectProduct={onSelectProduct}
-              key={product.id} product={product} />
-        ))}
-      </div>
+        <div className="orders-list-items">
+            {products.map(product => (
+                <ProductCard
+                    isSelected={checkIsSelected(selectedProducts, product)}
+                    onSelectProduct={onSelectProduct}
+                    product={product}
+                    key={product.id}
+                />
+            ))}
+        </div>
     </div>
-)
+);
 
 export default ProductsList;
